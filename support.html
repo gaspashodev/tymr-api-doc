@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tymr - Support</title>
+  <style>
+    :root {
+      --primary: #6366F1;
+      --primary-dark: #4F46E5;
+      --bg: #0F0F1A;
+      --bg-card: #1A1A2E;
+      --text: #FFFFFF;
+      --text-secondary: #9CA3AF;
+      --border: #2D2D3A;
+      --success: #10B981;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+      min-height: 100vh;
+    }
+
+    .container {
+      max-width: 700px;
+      margin: 0 auto;
+      padding: 40px 20px;
+    }
+
+    header {
+      text-align: center;
+      margin-bottom: 40px;
+      padding: 40px;
+      background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
+      border-radius: 20px;
+    }
+
+    header h1 {
+      font-size: 42px;
+      margin-bottom: 8px;
+    }
+
+    header p {
+      font-size: 18px;
+      opacity: 0.9;
+    }
+
+    section {
+      background: var(--bg-card);
+      border-radius: 16px;
+      padding: 30px;
+      margin-bottom: 24px;
+      border: 1px solid var(--border);
+    }
+
+    h2 {
+      font-size: 22px;
+      margin-bottom: 16px;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    h2::before {
+      content: '';
+      width: 4px;
+      height: 22px;
+      background: var(--primary);
+      border-radius: 2px;
+    }
+
+    p {
+      color: var(--text-secondary);
+      margin-bottom: 12px;
+    }
+
+    a {
+      color: var(--primary);
+      text-decoration: none;
+      font-weight: 500;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    .email-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: var(--bg);
+      padding: 12px 20px;
+      border-radius: 10px;
+      margin-top: 8px;
+      border: 1px solid var(--border);
+      transition: border-color 0.2s;
+    }
+
+    .email-link:hover {
+      border-color: var(--primary);
+      text-decoration: none;
+    }
+
+    ul {
+      list-style: none;
+      margin-top: 12px;
+    }
+
+    ul li {
+      color: var(--text-secondary);
+      padding: 8px 0;
+      padding-left: 24px;
+      position: relative;
+    }
+
+    ul li::before {
+      content: '✓';
+      color: var(--success);
+      position: absolute;
+      left: 0;
+    }
+
+    .privacy-note {
+      background: rgba(99, 102, 241, 0.1);
+      border-left: 4px solid var(--primary);
+      padding: 16px 20px;
+      border-radius: 0 12px 12px 0;
+      margin-top: 16px;
+    }
+
+    .privacy-note p {
+      margin-bottom: 0;
+      color: var(--text);
+    }
+
+    footer {
+      text-align: center;
+      padding: 30px;
+      color: var(--text-secondary);
+      font-size: 14px;
+    }
+
+    @media (max-width: 600px) {
+      header h1 {
+        font-size: 32px;
+      }
+
+      section {
+        padding: 24px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>⏱️ Tymr</h1>
+      <p>Real-time Multiplayer Timer</p>
+    </header>
+
+    <section>
+      <h2>Need Help?</h2>
+      <p>For any questions or issues with the app, contact us:</p>
+      <a href="mailto:mathieu@boardgamers.fr" class="email-link">
+        ✉️ mathieu@boardgamers.fr
+      </a>
+    </section>
+
+    <section>
+      <h2>Frequently Asked Questions</h2>
+      
+      <p><strong>How do I create a game?</strong></p>
+      <p>Tap "New Game", configure your settings (game mode, display mode, number of players, time per player), then tap "Create Game".</p>
+      
+      <p style="margin-top: 20px;"><strong>How do I join a game?</strong></p>
+      <p>Tap "Join", enter the 6-character code shared by the game creator, then select your player.</p>
+      
+      <p style="margin-top: 20px;"><strong>What are the game modes?</strong></p>
+      <ul>
+        <li><strong>Turn-based:</strong> One timer runs at a time, perfect for chess or strategy games</li>
+        <li><strong>Simultaneous:</strong> Multiple timers can run at once</li>
+      </ul>
+      
+      <p style="margin-top: 20px;"><strong>What are the display modes?</strong></p>
+      <ul>
+        <li><strong>Shared screen:</strong> All timers on one device</li>
+        <li><strong>Individual screens:</strong> Each player uses their own device</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Privacy Policy</h2>
+      <p>Tymr uses a server for real-time multiplayer synchronization.</p>
+      
+      <p><strong>Data we collect:</strong></p>
+      <ul>
+        <li>Player nicknames (chosen by you, not real names)</li>
+        <li>Timer values and game state</li>
+        <li>Session codes for multiplayer connectivity</li>
+      </ul>
+
+      <p style="margin-top: 16px;"><strong>Data we do NOT collect:</strong></p>
+      <ul>
+        <li>Personal identification (real name, email, phone)</li>
+        <li>Location data</li>
+        <li>Device identifiers</li>
+        <li>Usage analytics</li>
+      </ul>
+
+      <div class="privacy-note">
+        <p>📌 All game session data is automatically deleted after 24 hours of inactivity.</p>
+      </div>
+
+      <p style="margin-top: 20px; font-size: 13px;"><em>Last updated: January 2026</em></p>
+    </section>
+
+    <footer>
+      <p>Tymr © 2026 - Mathieu Gaspar</p>
+      <p><a href="https://boardgamers.fr">boardgamers.fr</a></p>
+    </footer>
+  </div>
+</body>
+</html>
